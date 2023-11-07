@@ -20,6 +20,7 @@ const server = http.createServer((req, res) => {
 });
 
 const PORT = config.get("PORT") || 80;
+console.group(PORT)
 server.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
