@@ -1,14 +1,11 @@
-
-  @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap");
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   flex-direction: column;
-  font-family: 'Fuzzy Bubbles', sans-serif;
-
+  font-family: "Fuzzy Bubbles", sans-serif;
 }
 
 section {
@@ -29,6 +26,48 @@ section {
   width: 100%;
   height: 100%;
   z-index: -1;
+}
+
+.background svg{
+ margin: 0;
+ padding: 0;
+ overflow: hidden;
+ background-repeat: no-repeat;
+ background-position: 95%;
+}
+
+@media (max-width: 760px) {
+  .background svg {
+    /* Mobile-specific background styles */
+    height: 100%;
+    /* For example, change background color for smaller screens */
+    background-color: #f0f0f0;
+  }
+  .container {
+    height: 100%;
+    margin: 2px;
+  }
+}
+@media (max-width: 375px) {
+  .background svg{
+    /* Mobile-specific background styles */
+    height: 100%;
+    /* For example, change background color for smaller screens */
+    background-color: #f0f0f0;
+  }
+
+  .container {
+    height: 100%;
+    margin: 2px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+
+  .container {
+    height: 100%;
+    margin: 2px;
+  }
 }
 
 .box {
@@ -53,7 +92,18 @@ section {
   border-radius: 10px;
   justify-content: center;
   align-items: center;
-  
+  /* background: #343d46;
+  background: linear-gradient(#454e57, #343d46);
+  background: -o-linear-gradient(#454e57, #343d46);
+  background: -moz-linear-gradient(#454e57, #343d46);
+  background: -webkit-linear-gradient(#454e57, #343d46); */
+}
+
+@media (max-width: 320px){
+ .container{
+  height: 100%;
+ 
+ }
 }
 
 #dycalendar {
@@ -65,11 +115,11 @@ section {
 #dycalendar table {
   width: 100%;
   margin: auto;
-  padding-top:20px;
+  padding-top: 20px;
   border-spacing: 10px;
 }
 #dycalendar table tr:nth-child(1) td {
-    backdrop-filter: blur(35px); 
+  backdrop-filter: blur(35px);
   color: #111;
   font-weight: 600;
   border-radius: 4px;
@@ -81,70 +131,76 @@ section {
   border-radius: 4px;
 }
 
-#dycalendar table td:hover{
-    background: #fff;
-    color: #111 !important;
+#dycalendar table td:hover {
+  background: #fff;
+  color: #111 !important;
 }
 
 .dycalendar-month-container .dycalendar-today-date,
 .dycalendar-month-container .dycalendar-target-date {
   background-color: #fff;
-
 }
-.dycalendar-month-container .dycalendar-header .dycalendar-prev-next-btn.prev-btn{
-    /* background-color: #fff; */
-    color: #111;
-    font-weight: 600;
-    font-family: 'Fuzzy Bubbles', sans-serif;
-    backdrop-filter: blur(35px);
-    width: 40px;
-    height: 32px;
-    border-radius: 4px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-}
-
-.dycalendar-month-container .dycalendar-header .dycalendar-prev-next-btn.prev-btn:hover{
-    background: #fff;
-    color: #111 !important;
-}
-.dycalendar-month-container .dycalendar-header .dycalendar-prev-next-btn.next-btn{
-    /* /* background-color: #fff; */
-    font-weight: 600;
-    backdrop-filter: blur(35px); 
-    color: #111;
-    width: 40px;
-    height: 32px;
-    border-radius: 4px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-}
-.dycalendar-month-container .dycalendar-header .dycalendar-prev-next-btn.next-btn:hover{
-    background: #fff;
-    color: #111 !important;
+.dycalendar-month-container
+  .dycalendar-header
+  .dycalendar-prev-next-btn.prev-btn {
+  /* background-color: #fff; */
+  color: #111;
+  font-weight: 600;
+  font-family: "Fuzzy Bubbles", sans-serif;
+  backdrop-filter: blur(35px);
+  width: 40px;
+  height: 32px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
 }
 
-.dycalendar-month-container .dycalendar-span-month-year{
-    font-size: 1.7em;
-    font-weight: 900;
-    justify-content: center;
-    align-items: center;
-    text-shadow: 0 13.36px 8.896px rgba(199, 7, 7, 0.2)px 1px #fff ;
+.dycalendar-month-container
+  .dycalendar-header
+  .dycalendar-prev-next-btn.prev-btn:hover {
+  background: #fff;
+  color: #111 !important;
+}
+.dycalendar-month-container
+  .dycalendar-header
+  .dycalendar-prev-next-btn.next-btn {
+  /* /* background-color: #fff; */
+  font-weight: 600;
+  backdrop-filter: blur(35px);
+  color: #111;
+  width: 40px;
+  height: 32px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+.dycalendar-month-container
+  .dycalendar-header
+  .dycalendar-prev-next-btn.next-btn:hover {
+  background: #fff;
+  color: #111 !important;
+}
+
+.dycalendar-month-container .dycalendar-span-month-year {
+  font-size: 1.7em;
+  font-weight: 900;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 13.36px 8.896px rgba(199, 7, 7, 0.2) px 1px #fff;
 }
 
 .container p {
-    padding-top: -8px;
-    font-size: 12px;
-    margin-bottom: 6px;
-    text-decoration: none;
-
+  padding-top: -8px;
+  font-size: 12px;
+  margin-bottom: 6px;
+  text-decoration: none;
 }
 
 .container p a {
-    text-decoration: none;
-    /* color: inherit; */
+  text-decoration: none;
+  /* color: inherit; */
 }
